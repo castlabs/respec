@@ -317,14 +317,6 @@ export function run(conf) {
       conf.maturity
     }-${conf.shortName}-${concatDate(conf.publishDate)}/`;
   if (conf.specStatus === "ED") conf.thisVersion = conf.edDraftURI;
-  if (conf.isRegular)
-    conf.latestVersion = `https://www.w3.org/${publishSpace}/${conf.shortName}/`;
-  if (conf.isTagFinding) {
-    conf.latestVersion = `https://www.w3.org/2001/tag/doc/${conf.shortName}`;
-    conf.thisVersion = `${conf.latestVersion}-${ISODate.format(
-      conf.publishDate
-    )}`;
-  }
   if (conf.previousPublishDate) {
     if (!conf.previousMaturity && !conf.isTagFinding) {
       pub("error", "`previousPublishDate` is set, but not `previousMaturity`.");

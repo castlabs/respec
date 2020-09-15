@@ -39,7 +39,6 @@ export default (conf, opts) => {
       : conf.isNoTrack
       ? renderIsNoTrack(conf, opts)
       : html`
-          <p><em>${conf.l10n.status_at_publication}</em></p>
           ${conf.isSubmission
             ? noteForSubmission(conf, opts)
             : html`
@@ -108,16 +107,6 @@ export default (conf, opts) => {
                   ? renderImplementationReportURI(conf)
                   : ""}
                 ${conf.sotdAfterWGinfo ? opts.additionalContent : ""}
-                ${conf.isRec ? renderIsRec() : renderNotRec(conf)}
-                ${renderDeliverer(conf)}
-                <p>
-                  This document is governed by the
-                  <a
-                    id="w3c_process_revision"
-                    href="https://www.w3.org/2019/Process-20190301/"
-                    >1 March 2019 W3C Process Document</a
-                  >.
-                </p>
                 ${conf.addPatentNote
                   ? html`<p>${[conf.addPatentNote]}</p>`
                   : ""}

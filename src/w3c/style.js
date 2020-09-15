@@ -166,7 +166,7 @@ export function run(conf) {
   }
   const finalVersionPath = version ? `${version}/` : "";
   const finalStyleURL = `https://www.w3.org/StyleSheets/TR/${finalVersionPath}${styleFile}`;
-  linkCSS(document, finalStyleURL);
+  //linkCSS(document, finalStyleURL);
   // Make sure the W3C stylesheet is the last stylesheet, as required by W3C Pub Rules.
   const moveStyle = styleMover(finalStyleURL);
   sub("beforesave", moveStyle);

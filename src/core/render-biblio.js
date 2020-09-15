@@ -43,16 +43,16 @@ const localizationStrings = {
 const l10n = getIntlData(localizationStrings);
 
 const REF_STATUSES = new Map([
-  ["CR", "W3C Candidate Recommendation"],
-  ["ED", "W3C Editor's Draft"],
-  ["FPWD", "W3C First Public Working Draft"],
-  ["LCWD", "W3C Last Call Working Draft"],
-  ["NOTE", "W3C Note"],
-  ["PER", "W3C Proposed Edited Recommendation"],
-  ["PR", "W3C Proposed Recommendation"],
-  ["REC", "W3C Recommendation"],
-  ["WD", "W3C Working Draft"],
-  ["WG-NOTE", "W3C Working Group Note"],
+  ["CR", "Candidate Recommendation"],
+  ["ED", "Editor's Draft"],
+  ["FPWD", "First Public Working Draft"],
+  ["LCWD", "Last Call Working Draft"],
+  ["NOTE", "Note"],
+  ["PER", "Proposed Edited Recommendation"],
+  ["PR", "Proposed Recommendation"],
+  ["REC", "Recommendation"],
+  ["WD", "Working Draft"],
+  ["WG-NOTE", "Working Group Note"],
 ]);
 
 const defaultsReference = Object.freeze({

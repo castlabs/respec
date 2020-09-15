@@ -112,7 +112,7 @@ export default (conf, options) => {
     ${conf.logos.map(showLogo)} ${document.querySelector("h1#title")}
     ${getSpecSubTitleElem(conf)}
     <h2>
-      ${conf.prependW3C ? "W3C " : ""}${conf.textStatus}
+      ${conf.prependW3C ? "Castlabs " : ""}${conf.textStatus}
       <time class="dt-published" datetime="${conf.dashDate}"
         >${conf.publishHumanDate}</time
       >${conf.modificationDate
@@ -289,29 +289,13 @@ function renderCopyright(conf) {
 
 function renderOfficialCopyright(conf) {
   return html`<p class="copyright">
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright"
-      >Copyright</a
-    >
+    Copyright
     &copy;
     ${conf.copyrightStart ? `${conf.copyrightStart}-` : ""}${conf.publishYear}
     ${conf.additionalCopyrightHolders
       ? html` ${[conf.additionalCopyrightHolders]} &amp; `
       : ""}
-    <a href="https://www.w3.org/"
-      ><abbr title="World Wide Web Consortium">W3C</abbr></a
-    ><sup>&reg;</sup> (<a href="https://www.csail.mit.edu/"
-      ><abbr title="Massachusetts Institute of Technology">MIT</abbr></a
-    >,
-    <a href="https://www.ercim.eu/"
-      ><abbr
-        title="European Research Consortium for Informatics and Mathematics"
-        >ERCIM</abbr
-      ></a
-    >, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). ${noteIfDualLicense(conf)}
-    W3C <a href="${legalDisclaimer}">liability</a>,
-    <a href="${w3cTrademark}">trademark</a> and ${linkDocumentUse(conf)} rules
-    apply.
+    <a href="https://castlabs.com"><abbr title="Castlabs">Castlabs</abbr></a>
   </p>`;
 }
 
